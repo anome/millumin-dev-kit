@@ -1,0 +1,12 @@
+##################
+# HOW TO INSTALL #
+##################
+
+- be sure to run at least : MaxMSP 5.1.4  or  Max 6.0.2
+- install the 2 Syphon plugins from "Syphon for Jitter Public Beta 2 r2.dmg" file
+- run "Max to Millumin via Syphon.maxpat" to test Syphon to Millumin
+- run "Millumin Sound Opacity OSC.maxpat" to test opacity control over OSC (in both ways)
+
+
+
+If you need support, please write me an email --> contact@millumin.com
