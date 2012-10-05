@@ -1,0 +1,12 @@
+##################
+# HOW TO INSTALL #
+##################
+
+- be sure to have the last version of OpenFrameworks
+- install "ofxSyphon" in the "addons" directory
+- install "MilluminExample" in the "apps/myApps"
+- launch "MilluminExample/MilluminExample.xcodeproj" in Xcode
+
+
+
+If you need support, please write me an email --> contact@millumin.com

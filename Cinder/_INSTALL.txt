@@ -1,0 +1,11 @@
+##################
+# HOW TO INSTALL #
+##################
+
+- be sure to have the last version of Cinder
+- install "ciMillumin" in the "samples" directory
+- launch "ciMillumin/xcode/ciMillumin.xcodeproj" in Xcode
+
+
+
+If you need support, please write me an email --> contact@millumin.com

@@ -1,0 +1,11 @@
+##################
+# HOW TO INSTALL #
+##################
+
+- install the Syphon plugin from "Syphon For Quartz Composer Public Beta 2.dmg" file
+- install the qcOSC plugin from "qcOSC-v0.6.zip" file
+- open "MilluQuartz.qtz" with QUartz Composer and play with the opacity of Millumin's first layer
+
+
+
+If you need support, please write me an email --> contact@millumin.com
