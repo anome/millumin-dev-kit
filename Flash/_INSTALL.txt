@@ -1,0 +1,10 @@
+##################
+# HOW TO INSTALL #
+##################
+
+- oopen "Flash2Millumin.fla" with Adobe Flash CS5 or higher
+- more information on http://bubblebird.at/tuioflash/guides/sending-osc/
+
+
+
+If you need support, please write me an email --> contact@millumin.com

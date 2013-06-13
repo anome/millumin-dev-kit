@@ -1,0 +1,1 @@
+﻿package com.anomes.millumin{	import org.tuio.osc.*;	import flash.events.Event;		public class MyOSCEvent extends Event	{		public var oscMessage:OSCMessage;		public function MyOSCEvent(type:String)		{        	super(type);    	}	}}
