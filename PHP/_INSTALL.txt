@@ -1,0 +1,11 @@
+##################
+# HOW TO INSTALL #
+##################
+
+- put "OSC.php" in folder "/Users/username/Sites/php2millumin"
+- open the URL "http://localhost/~username/php2millumin/OSC.php" in your browser
+- more information on http://opensoundcontrol.org/implementation/open-sound-control-php
+
+
+
+If you need support, please write me an email --> contact@millumin.com
