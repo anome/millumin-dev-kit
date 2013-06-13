@@ -1,0 +1,10 @@
+##################
+# HOW TO INSTALL #
+##################
+
+- open a terminal and run "python Python2Millumin.py"
+- it is recommanded to install "pyOSC" and delete "OSC.py"
+
+
+
+If you need support, please write me an email --> contact@millumin.com
