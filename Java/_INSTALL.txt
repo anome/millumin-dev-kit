@@ -1,0 +1,10 @@
+##################
+# HOW TO INSTALL #
+##################
+
+- open a Terminal and execute "javac OSCTest.java" then "java OSCTest"
+- more information on http://github.com/hoijui/JavaOSC
+
+
+
+If you need support, please write me an email --> contact@millumin.com
