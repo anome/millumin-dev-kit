@@ -2,7 +2,7 @@
 # HOW TO INSTALL #
 ##################
 
-- be sure to use the last version of PureData (the extended version)
+- be sure to use the version "Pd-extended 0.42.5" of PureData (not tested on 0.43.4)
 - right-click on the "Pd-extended" application, then choose "Show Package Contents"
 - unzip the "pd-syphonserver.zip" files into the "Plugins" folder
 - run one of the *.PD files
