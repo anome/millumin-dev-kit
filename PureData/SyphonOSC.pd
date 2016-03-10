@@ -18,10 +18,10 @@
 #X obj 67 -124 routeOSC /layer;
 #X obj 67 -100 routeOSC /opacity;
 #X obj 67 -77 routeOSC /0;
-#X msg 150 64 send /millumin/layer/opacity/0 \$1;
-#X msg 150 117 send /millumin/layer/rotation/1 0;
-#X msg 150 169 send /millumin/layer/rotation/1 90;
-#X msg 151 143 send /millumin/layer/rotation/1 40.6;
+#X msg 150 64 send /millumin/selectedLayer/opacity \$1;
+#X msg 150 117 send /millumin/index:1/rotation 0;
+#X msg 150 169 send /millumin/index:1/rotation 90;
+#X msg 151 143 send /millumin/index:1/rotation 40.6;
 #X obj 662 242 gemhead 999;
 #X obj 662 281 syphonserver name;
 #X obj 531 241 gemhead 50;

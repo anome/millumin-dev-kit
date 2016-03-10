@@ -3,7 +3,7 @@ import sys, time, random, threading
 
 # CONFIGURATION
 machinesIP = ["127.0.0.1", "192.168.0.21", "192.168.0.31", "192.168.0.41"]
-messagesToEcho = ["/millumin/action/playOrStop/", "/millumin/layer/opacity/1"]
+messagesToEcho = ["/millumin/action/playOrPauseTimeline", "/millumin/index:1/opacity"]
 milluminListenPort = 5000
 senderPort = 7000
 printMessage = 1

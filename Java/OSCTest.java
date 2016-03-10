@@ -16,7 +16,7 @@ public class OSCTest
 			sender = new OSCPortOut(address, 5000);
 			Object arguments[] = new Object[1];
 			arguments[0] = new Integer(80);
-			OSCMessage msg = new OSCMessage("/millumin/layer/opacity/0", arguments);
+			OSCMessage msg = new OSCMessage("/millumin/selectedLayer/opacity", arguments);
 			sender.send(msg);
 		}
 		catch (Exception e)
@@ -41,7 +41,7 @@ public class OSCTest
 				}
 			}
 		};
-		receiver.addListener("/millumin/layer/opacity/0", listener);
+		receiver.addListener("/millumin/selectedLayer/opacity", listener);
 		receiver.startListening();
 	}
 	

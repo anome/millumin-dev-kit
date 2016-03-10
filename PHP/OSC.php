@@ -580,9 +580,9 @@ function test_osc_lib() {
 $c = new OSCClient();
 $c->set_destination("localhost", 5000);
 
-$m1 = new OSCMessage("/millumin/layer/opacity/0", array());
+$m1 = new OSCMessage("/millumin/selectedLayer/opacity", array());
 $m1->add_arg(80, "f");
-$m2 = new OSCMessage("/millumin/layer/opacity/1", array(80));
+$m2 = new OSCMessage("/millumin/selectedLayer/opacity", array(80));
 
 $b = new OSCBundle();
 $b->add_datagram($m1);

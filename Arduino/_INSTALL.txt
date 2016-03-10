@@ -14,5 +14,4 @@
 If you want to use direct OSC connection between your Arduino circuit and Millumin, please install ArdOSC and watch this tutorial ---> http://vimeo.com/9145690
 
 
-
-If you need support, please write me an email --> contact@millumin.com
+Keep in mind that the easiest way to use your Arduino with Millumin V2, is to click on the button "Auto-program"

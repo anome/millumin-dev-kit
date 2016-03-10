@@ -19,6 +19,5 @@ oscClient.send(msg)
 time.sleep(5)
 
 # GO TO FULLSCREEN
-msg = OSC.OSCMessage("/millumin/action/fullscreen")
-msg.append(1)
+msg = OSC.OSCMessage("/millumin/action/enterFullscreen")
 oscClient.send(msg)

@@ -1,0 +1,24 @@
+##################
+# HOW TO INSTALL #
+##################
+
+- be sure to use Processing 2.0
+- open your Processing sketchbook folder (usually ~/Documents/Processing)
+- copy the "libraries" folder inside
+- restart Processing
+- play with the examples
+
+
+
+
+
+####################
+# BEING UP-TO-DATE #
+####################
+
+Find more tutorials here : http://help.millumin.com
+
+This pack uses "oscP5-0.9.8" and "Syphon-for-Processing-2.0-Beta 2".
+Be sure to download the last versions :
+- http://www.sojamo.de/libraries/oscP5/
+- http://code.google.com/p/syphon-implementations/downloads/list

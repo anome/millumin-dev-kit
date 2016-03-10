@@ -183,7 +183,7 @@ void MilluminApp::draw(){
 //--------------------------------------------------------------
 void MilluminApp::mouseMoved(int x, int y){
 	ofxOscMessage m;
-	m.setAddress("/millumin/layer/opacity/0");
+	m.setAddress("/millumin/selectedLayer/opacity");
 	m.addFloatArg( x*100.f/width );
 	sender.sendMessage(m);
 }

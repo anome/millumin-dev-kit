@@ -22,8 +22,8 @@ def printing_handler(addr, tags, stuff, source):
     print "data %s" % stuff
     print "---"
 
-oscServer.addMsgHandler("/millumin/layer/opacity/0", printing_handler)
-oscServer.addMsgHandler("/millumin/layer/opacity/1", printing_handler)
+oscServer.addMsgHandler("/millumin/selectedLayer/opacity", printing_handler)
+oscServer.addMsgHandler("/millumin/index:1/opacity", printing_handler)
 
 st = threading.Thread( target = oscServer.serve_forever )
 st.start()
@@ -38,10 +38,10 @@ st.start()
 # TEST 1 : SENDING OSC BUNDLE
 bundle = OSC.OSCBundle()
 msg = OSC.OSCMessage()
-msg.setAddress("/millumin/layer/opacity/0")
+msg.setAddress("/millumin/selectedLayer/opacity")
 msg.append(80)
 bundle.append(msg)
-bundle.append( {'addr':"/millumin/layer/opacity/1", 'args':[80]} )
+bundle.append( {'addr':"/millumin/index:1/opacity", 'args':[80]} )
 oscClient.send(bundle)
 
 
@@ -54,7 +54,7 @@ try :
 	seed = random.Random()
 	while 1 :
 		msg = OSC.OSCMessage()
-		msg.setAddress("/millumin/layer/opacity/0")
+		msg.setAddress("/millumin/selectedLayer/opacity")
 		n = seed.randint(0, 100)
 		msg.append(n)
 		oscClient.send(msg)

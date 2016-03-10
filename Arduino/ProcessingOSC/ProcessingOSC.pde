@@ -35,7 +35,7 @@ void serialEvent (Serial myPort) {
       if ( value != previousValue )
       {
         println(value);
-        OscMessage myOscMessage = new OscMessage("/millumin/layer/opacity/1");
+        OscMessage myOscMessage = new OscMessage("/millumin/selectedLayer/opacity");
         myOscMessage.add(value*100);
         oscP5.send(myOscMessage, myBroadcastLocation);
         previousValue = value;

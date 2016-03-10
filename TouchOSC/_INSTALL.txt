@@ -2,10 +2,6 @@
 # HOW TO INSTALL #
 ##################
 
-- be sure to follow the tutorial for TouchOSC : http://lab.millumin.com/tutorials/?name=touchosc 
-- then unzip the "touchosc-editor-1.5.6-osx.zip" file
+- be sure to follow the tutorial for TouchOSC : http://help.millumin.com/?page=02_tutorials_advanced/touchosc
+- then unzip the "touchosc-editor-1.8.0-osx.zip" file
 - open one of the *.TOUCHOSC file to change a template for your own use
-
-
-
-If you need support, please write me an email --> contact@millumin.com

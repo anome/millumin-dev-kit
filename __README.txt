@@ -2,9 +2,7 @@
 # DEVELOPER-KIT #
 #################
 
-You want to build your own app ? You want to connect another app to Millumin ?
-I created this Developer Kit, so you will see clear examples in many technologies.
+You want to build your own application ? You want to connect another application to Millumin ?
+We created this Developer Kit, so you will see clear examples in many technologies.
 
-
-
-If you need support, please write me an email --> contact@millumin.com
+You can contact our support if you have questions : see help.millumin.com

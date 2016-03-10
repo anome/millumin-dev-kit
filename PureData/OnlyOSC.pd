@@ -13,14 +13,14 @@
 #X obj 54 395 routeOSC /0;
 #X obj 255 373 udpsend;
 #X obj 274 332 packOSC;
-#X msg 503 234 send /millumin/layer/opacity/0 \$1;
-#X msg 503 321 send /millumin/layer/rotation/1 0;
-#X msg 503 372 send /millumin/layer/rotation/1 90;
+#X msg 503 234 send /millumin/selectedLayer/opacity \$1;
+#X msg 503 321 send /millumin/index:1/rotation 0;
+#X msg 503 372 send /millumin/index:1/rotation 90;
 #X obj 255 405 tgl 15 0 empty empty connected 20 7 0 8 -204786 -1 -162280
 0 1;
 #X msg 255 231 connect 127.0.0.1 5000;
 #X msg 270 256 disconnect;
-#X msg 503 345 send /millumin/layer/rotation/1 40.6;
+#X msg 503 345 send /millumin/index:1/rotation 40.6;
 #X obj 54 301 routeOSC /millumin;
 #X obj 655 35 import mrpeach;
 #X connect 2 0 10 0;

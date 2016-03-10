@@ -169,7 +169,7 @@ void MilluminApp::update()
 	}
 	osc::Message message;
 	message.addFloatArg(  (cos(getElapsedSeconds()) / 2.0f + .5f)*100.f  );
-	message.setAddress("/millumin/layer/opacity/0");
+	message.setAddress("/millumin/selectedLayer/opacity");
 	message.setRemoteEndpoint(host, port);
 	sender.sendMessage(message);
     
