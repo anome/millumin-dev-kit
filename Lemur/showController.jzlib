@@ -1,0 +1,78 @@
+<JZML>
+<WINDOW class="Container" text="ShowController" x="0" y="0" width="568" height="276" id="15" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" label="1" tabbar="1" meta="0">
+<WINDOW class="Container" text="Column2" x="0" y="0" width="552" height="260" id="3" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" label="1" tabbar="1" meta="0">
+<WINDOW class="CustomButton" text="LaunchNext" x="436" y="166" width="100" height="78" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="0,0" capture="1" color="865343,1596013" label_off="Next" label_on="Next" outline="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/millumin/action/launchNextColumn" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column2/LaunchNext/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text" x="220" y="0" width="316" height="116" id="1" state="241" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="this container will be visible only on columns 4 to 6. This can be changed by editing the 'visibleOnColumns' properties. To add anoter container,just duplicate this one.">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column2/Text/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<VARIABLE name="visibleOnColumns={4,5,6}" send="1" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column2/visibleOnColumns" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Container" text="Column1" x="0" y="0" width="552" height="260" id="4" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" label="1" tabbar="1" meta="0">
+<WINDOW class="CustomButton" text="LaunchNext" x="436" y="166" width="100" height="78" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="0,0" capture="1" color="865343,1596013" label_off="Next" label_on="Next" outline="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/millumin/action/launchNextColumn" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column1/LaunchNext/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="Layer1opacity" x="52" y="0" width="120" height="244" id="2" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="1596013" gradient="0" grid="0" grid_steps="1" horizontal="0" label="1" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="0.309091" send="25" osc_target="0" osc_trigger="1" osc_message="/millumin/index:1/opacity" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column1/Layer1opacity/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column1/Layer1opacity/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column1/Layer1opacity/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column1/Layer1opacity/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column1/Layer1opacity/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text" x="270" y="0" width="266" height="116" id="3" state="241" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="this container will be visible only on columns 1 to 3. This can be changed by editing the 'visibleOnColumns' properties. To add anoter container,just duplicate this one.">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column1/Text/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<VARIABLE name="visibleOnColumns={1,2,3}" send="1" osc_target="0" osc_trigger="1" osc_message="/ShowController/Column1/visibleOnColumns" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<VARIABLE name="_currentColumn=" value="1" send="1" osc_target="0" osc_trigger="1" osc_message="/ShowController/_currentColumn" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="dispatch(OSC_ARGS)" script="decl this = getobject();
+decl OSC_KEY = 'board/launchedColumn';
+	
+if( OSC_ARGS[0] == OSC_KEY )
+{
+//Use OSC_ARGS[1] for index based controler and OSC_ARGS[3] if you want to use the column name.
+//In that case, visibleOnColumns should be something like {'name1','name2,'columnName3'}
+	_currentColumn = OSC_ARGS[1];
+	//_currentColumn = OSC_ARGS[3];
+	updateForColumnIndex(_currentColumn);
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/millumin/info" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="updateForColumnIndex(index)" script="hideAll();
+decl this = getobject();	
+decl id = getfirst(this);
+while(id)
+{
+	decl visibleOnColumns = getexpression(id,'visibleOnColumns');
+	decl testedIndex;
+	decl i;
+	for(i = 0 ; i < sizeof(visibleOnColumns) ; i++)
+	{
+		testedIndex = visibleOnColumns[i];
+		if(testedIndex == index)
+		{
+			show(id,1);
+		}
+
+	}
+	id = getnext(id);
+}" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/ShowController/updateForColumnIndex" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="hideAll()" script="decl this = getobject();	
+decl id = getfirst(this);
+while(id)
+{
+	show(id,0);
+	id = getnext(id);
+}" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/ShowController/hideAll" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="___README()" script="//SHOWS A DIFFERENT INTERFACE DEPENDING ON MILLUMIN LAUNCHED COLUMN.
+
+//stuff to tune 
+//- duplicate the Collumn1 container as much as you want.
+//- in each container, change the visible column variable.
+//- Tip : to edit the container, right click on it and bring to front.
+
+" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/ShowController/___README" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</JZML>

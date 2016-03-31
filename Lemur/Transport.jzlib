@@ -1,0 +1,85 @@
+<JZML>
+<WINDOW class="Container" text="Transport" x="0" y="0" width="527" height="212" id="13" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" label="1" tabbar="1" meta="0">
+<WINDOW class="CustomButton" text="LaunchNext" x="295" y="118" width="100" height="78" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="0,0" capture="1" color="865343,1596013" label_off="Next" label_on="Next" outline="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/millumin/action/launchNextColumn" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/LaunchNext/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="CurrentColumnField" x="190" y="49" width="150" height="48" id="3" state="241" group="0" font="tahoma,22,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/CurrentColumnField/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="NextColumnField" x="361" y="49" width="150" height="48" id="4" state="241" group="0" font="tahoma,13,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/NextColumnField/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="PreviousColumnField" x="0" y="49" width="150" height="48" id="5" state="241" group="0" font="tahoma,13,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/PreviousColumnField/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="LaunchPrevious" x="137" y="117" width="100" height="78" id="6" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" behavior="1" bitmap="0,0" capture="1" color="865343,1596013" label_off="Prev" label_on="Prev" outline="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/millumin/action/launchPreviousColumn" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/LaunchPrevious/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="PreviousTitle" x="33" y="14" width="84" height="48" id="7" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="Previous">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/PreviousTitle/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="CurrentTitle" x="217" y="15" width="100" height="48" id="8" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="Current">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/CurrentTitle/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="NextTitle" x="387" y="15" width="100" height="48" id="9" state="245" group="0" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="Next">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/NextTitle/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="TransitionSlider" x="0" y="97" width="511" height="20" id="10" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="1596013" gradient="1" grid="0" grid_steps="1" horizontal="1" label="0" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="1.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Transport/TransitionSlider/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Transport/TransitionSlider/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/TransitionSlider/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/TransitionSlider/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/TransitionSlider/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Transport/TransitionSlider/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<VARIABLE name="_transitionDuration=" value="0" send="1" osc_target="0" osc_trigger="1" osc_message="/Transport/_transitionDuration" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_transitionStartTime=" value="0" send="1" osc_target="0" osc_trigger="1" osc_message="/Transport/_transitionStartTime" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_currentColumn=" value="0" send="1" osc_target="0" osc_trigger="1" osc_message="/Transport/_currentColumn" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="dispatch(OSC_ARGS)" script="decl this = getobject();
+decl OSC_KEY = 'board/launchedColumn';
+	
+if( OSC_ARGS[0] == OSC_KEY )
+{
+	_currentColumn = OSC_ARGS[1];
+	decl previousIndex = _currentColumn-1;
+	decl nextIndex = _currentColumn+1;
+
+	setattribute(PreviousColumnField,'content',''+previousIndex+':'+OSC_ARGS[2]);
+	setattribute(CurrentColumnField,'content',''+_currentColumn+':'+OSC_ARGS[3]);
+	setattribute(NextColumnField,'content',''+nextIndex+':'+OSC_ARGS[4]);
+	_transitionDuration = OSC_ARGS[5]/1000;
+
+	if( _transitionDuration > 1 ) 
+	{
+		_transitionStartTime = time;
+	}
+	else
+	{
+		_transitionDuration = 0;//avoid blinks if under a second
+	}
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/millumin/info" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="updateTransition()" script="if( _transitionDuration != 0 )
+{
+	decl fraction = time - _transitionStartTime;
+	if(time < _transitionStartTime + _transitionDuration )
+	{
+		TransitionSlider.x = fraction/_transitionDuration;
+	}
+}
+else 
+{
+	_transitionDuration = 0;
+	_transitionStartTime = 0;
+}
+if( _transitionStartTime == 0 )
+{
+	TransitionSlider.x = 1;
+}" trigger_script="" trigger_type="1" trigger="1" clock="0" clock_div="4" osc_message="/Transport/updateTransition" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="___README()" script="//NAVIGATE THROUGH COLLUMNS IN MILLUMIN
+
+//- tip : name your collumns in Millumin for a better visibility.
+//- tip : visualise transition times on lemur." trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/Transport/___README" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</JZML>

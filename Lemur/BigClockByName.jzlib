@@ -1,0 +1,160 @@
+<JZML>
+<WINDOW class="Container" text="BigClockByName" x="0" y="0" width="298" height="159" id="12" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" label="1" tabbar="1" meta="0">
+<WINDOW class="Text" text="ClockField" x="0" y="78" width="140" height="66" id="17" state="241" group="0" font="tahoma,24,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="time">
+<VARIABLE name="light=0" send="0" osc_target="-1" osc_trigger="1" osc_message="/BigClockByName/ClockField/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="update(value)" script="decl this = getobject();
+decl seconds = floor(value % 60); 
+decl minutes = floor(value/60) % 60;
+decl hours = floor(value/3600);
+
+decl hourString = '00:';
+decl minutesString = '00:';
+decl secondsString = '00';
+decl timeString;
+
+if	(hours > 0)
+{
+	if( hours < 10)
+	{
+		hourString = '0'+hours+':';
+	}
+	else
+	{
+		hourString = ''+hours+':';
+	}
+}
+if	(minutes > 0)
+{
+	if( minutes < 10)
+	{
+		minutesString = '0'+minutes+':';
+	}
+	else
+	{
+		minutesString = ''+minutes+':';
+	}
+
+}
+if	(seconds > 0)
+{
+	if( seconds < 10)
+	{
+		secondsString = '0'+seconds;
+	}
+	else
+	{
+		secondsString = ''+seconds;
+	}
+}
+timeString = ''+hourString+minutesString+secondsString;
+setattribute(this,'content',timeString);
+" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/BigClockByName/ClockField/update" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Text" text="RemainField" x="140" y="78" width="142" height="66" id="18" state="241" group="0" font="tahoma,24,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="remain">
+<VARIABLE name="light=0" send="0" osc_target="-1" osc_trigger="1" osc_message="/BigClockByName/RemainField/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="update(value)" script="decl this = getobject();
+decl seconds = floor(value % 60); 
+decl minutes = floor(value/60) % 60;
+decl hours = floor(value/3600);
+
+decl hourString = '00:';
+decl minutesString = '00:';
+decl secondsString = '00';
+decl timeString;
+
+if	(hours > 0)
+{
+	if( hours < 10)
+	{
+		hourString = '0'+hours+':';
+	}
+	else
+	{
+		hourString = ''+hours+':';
+	}
+}
+if	(minutes > 0)
+{
+	if( minutes < 10)
+	{
+		minutesString = '0'+minutes+':';
+	}
+	else
+	{
+		minutesString = ''+minutes+':';
+	}
+
+}
+if	(seconds > 0)
+{
+	if( seconds < 10)
+	{
+		secondsString = '0'+seconds;
+	}
+	else
+	{
+		secondsString = ''+seconds;
+	}
+}
+timeString = ''+hourString+minutesString+secondsString;
+setattribute(this,'content',timeString);
+" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/BigClockByName/RemainField/update" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="NormalizedTime" x="0" y="48" width="282" height="30" id="19" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="1596013" gradient="1" grid="0" grid_steps="1" horizontal="1" label="0" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="0.671389" send="17" osc_target="-1" osc_trigger="1" osc_message="/BigClockByName/NormalizedTime/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/BigClockByName/NormalizedTime/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/BigClockByName/NormalizedTime/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/BigClockByName/NormalizedTime/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/BigClockByName/NormalizedTime/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/BigClockByName/NormalizedTime/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="LayerMediaNameField" x="0" y="0" width="282" height="48" id="20" state="241" group="0" font="tahoma,17,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" content="media name">
+<VARIABLE name="light=0" send="0" osc_target="-1" osc_trigger="1" osc_message="/BigClockByName/LayerMediaNameField/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<VARIABLE name="AlertTimeInSeconds=10" send="1" osc_target="0" osc_trigger="1" osc_message="/BigClockByName/AlertTimeInSeconds" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_currentMediaName=" value="0" send="1" osc_target="0" osc_trigger="1" osc_message="/BigClockByName/_currentMediaName" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="1064,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="WatchedLayerName='layer'" send="1" osc_target="0" osc_trigger="1" osc_message="/BigClockByName/WatchedLayerName" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="updateColor(t,length,threshold)" script="decl endOfFileColor = RGB(1.0,0.0,0.0);
+decl endOfFileColor2 = RGB(1.0,1.0,0.0);
+decl normalColor = 1596013;
+
+if(t > length-threshold)
+{
+	if( floor(time) % 2 == 0 )
+	{
+		setattribute(NormalizedTime, 'color', endOfFileColor2);
+	}
+	else
+	{
+		setattribute(NormalizedTime, 'color', endOfFileColor);
+	}
+}
+else
+{
+	setattribute(NormalizedTime, 'color', normalColor);
+}" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/BigClockByName/updateColor" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="___README()" script="//SHOWS A BIG CLOCK ON A SELECTED LAYER 
+
+//stuff to tune 
+//- change the wathedLayerName
+//- change the alert time
+" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/BigClockByName/___README" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="dispatch(OSC_ARGS)" script="decl this = getobject();
+decl OSC_TIME_KEY = 'layer:'+WatchedLayerName+'/media/time';
+decl OSC_MEDIA_KEY = 'layer:'+WatchedLayerName+'/mediaStarted';
+if( OSC_ARGS[0] == OSC_TIME_KEY )
+{
+	ClockField.update(OSC_ARGS[1]);
+	RemainField.update(OSC_ARGS[2]-OSC_ARGS[1]);
+	updateColor(OSC_ARGS[1],OSC_ARGS[2],AlertTimeInSeconds);
+	setattribute('NormalizedTime','x',OSC_ARGS[1]/OSC_ARGS[2]);
+	NormalizedTime.x = OSC_ARGS[1]/OSC_ARGS[2];
+}
+else if( OSC_ARGS[0] == OSC_MEDIA_KEY ) 
+{
+	_currentMediaName = OSC_ARGS[2];
+	updateLayerandMediaName();
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/millumin/info" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="updateLayerandMediaName()" script="setattribute(LayerMediaNameField,'content',''+WatchedLayerName+':'+_currentMediaName);" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/BigClockByName/updateLayerandMediaName" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</JZML>
