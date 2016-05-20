@@ -1,0 +1,49 @@
+<JZML>
+<WINDOW class="Multiball" text="LayerPosition" x="0" y="0" width="812" height="462" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1596013" cursor="1" ephemere="0" grid="0" grid_steps="1,1" label="0" multicolor="0" multilabel="0" nbr="1" physic="1" polyphony="0" zoom="1.000000">
+<PARAM name="x=" value="1.000000" send="21" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="-400.000000,400.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="y=" value="1.000000" send="21" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="-400.000000,400.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.6" send="0" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="holdX=0" send="0" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/holdX" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="holdY=0" send="0" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/holdY" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_layerName='layer'" send="1" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/_layerName" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="28697,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_scale=400" send="1" osc_target="0" osc_trigger="1" osc_message="/LayerPosition/_scale" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="dispatch(OSC_ARGS)" script="decl this = getobject();
+decl OSC_KEY = 'layer:'+_layerName+'/position';
+	
+if( OSC_ARGS[0] == OSC_KEY )
+{
+
+	x=map(OSC_ARGS[1]);
+	y=map(OSC_ARGS[2]);
+
+}" trigger_script="" trigger_type="2" trigger="1" clock="0" clock_div="4" osc_message="/millumin/info" midi_message="0x90,0x90,0,0" midi_target="-1" flag="9"/>
+<SCRIPT name="map(x)" script="decl inMin = -_scale;
+decl inMax = _scale;
+
+decl outMin = 0;
+decl outMax = 1;
+
+return (x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/LayerPosition/map" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="update()" script="oscout(0,'/millumin/layer:'+_layerName+'/position',{unMap(x),unMap(y)});
+" trigger_script="x" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/LayerPosition/update" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="unMap(x)" script="decl inMin = 0;
+decl inMax = 1;
+
+decl outMin = -_scale;
+decl outMax = _scale;
+
+return (x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/LayerPosition/unMap" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="___README()" script="//Layer position control for Millumin2
+//-tip : change the _layerName ton control a specific layer
+//-tip : change the _scale 
+" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/LayerPosition/___README" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</JZML>
