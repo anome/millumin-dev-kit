@@ -10,10 +10,17 @@ NetAddress myBroadcastLocation;
 float factor;
 
 
+void settings()
+{
+  // DISPLAY (Syphon does not support OpenGL 3+ yet)
+  size(640, 480, P3D);
+  PJOGL.profile = 1;
+}
+
+
 void setup()
 {
-  // DISPLAY SETUP
-  size(640, 480, P3D);
+  // CANVAS SETUP
   canvas = createGraphics(640, 480, P3D);
   // SYPHON SETUP
   server = new SyphonServer(this, "Processing Cube");

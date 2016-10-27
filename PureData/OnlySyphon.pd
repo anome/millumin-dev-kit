@@ -1,4 +1,4 @@
-#N canvas 393 176 640 334 10;
+#N canvas 682 372 640 334 10;
 #X obj 49 133 cnv 15 160 140 empty empty Syphon 20 12 0 14 -203904
 -1 0;
 #X obj 291 133 cnv 15 300 140 empty empty Cube_3D 20 12 0 14 -262130
@@ -6,7 +6,7 @@
 #X obj 71 174 gemhead 999;
 #X obj 383 234 cube;
 #X obj 383 167 gemhead 50;
-#X msg 476 167 create;
+#X msg 476 167 destroy;
 #N canvas 0 22 449 371 my_gemwin 0;
 #X obj 132 298 gemwin;
 #X obj 51 299 outlet;
@@ -30,6 +30,9 @@
 #X msg 401 34 START;
 #X obj 71 201 syphonserver name;
 #X msg 314 206 draw line;
+#X text 44 69 Press CMD+E to edit the patch.;
+#X text 44 32 BASIC PURE DATA EXAMPLE;
+#X text 44 56 Be sure to click "START" first.;
 #X connect 2 0 9 0;
 #X connect 4 0 3 0;
 #X connect 5 0 6 0;

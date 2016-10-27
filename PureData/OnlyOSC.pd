@@ -1,40 +1,41 @@
-#N canvas 616 217 777 475 10;
+#N canvas 647 390 793 469 10;
 #X declare -lib mrpeach;
-#X obj 234 193 cnv 15 510 240 empty empty Send_OSC 20 12 0 14 -262130
+#X obj 234 193 cnv 15 530 240 empty empty Send_OSC 20 12 0 14 -262130
 -1 0;
-#X obj 32 195 cnv 15 160 240 empty empty Receive_OSC 20 12 0 14 -203904
+#X obj 32 195 cnv 15 180 240 empty empty Receive_OSC 20 12 0 14 -203904
 -1 0;
-#X obj 285 85 hsl 128 15 0 100 0 0 empty empty Opacity_(current_layer)
+#X obj 340 90 hsl 128 15 0 1 0 0 empty empty Opacity_(selected_layer)
 -2 -8 0 10 -257985 -99865 -1 0 0;
 #X obj 54 258 unpackOSC;
-#X obj 54 235 udpreceive 5001;
-#X obj 54 331 routeOSC /layer;
-#X obj 54 362 routeOSC /opacity;
-#X obj 54 395 routeOSC /0;
-#X obj 255 373 udpsend;
-#X obj 274 332 packOSC;
+#X obj 53 235 udpreceive 5001;
+#X obj 54 399 routeOSC /opacity;
+#X obj 274 346 packOSC;
 #X msg 503 234 send /millumin/selectedLayer/opacity \$1;
 #X msg 503 321 send /millumin/index:1/rotation 0;
 #X msg 503 372 send /millumin/index:1/rotation 90;
 #X obj 255 405 tgl 15 0 empty empty connected 20 7 0 8 -204786 -1 -162280
 0 1;
 #X msg 255 231 connect 127.0.0.1 5000;
-#X msg 270 256 disconnect;
+#X msg 268 261 disconnect;
 #X msg 503 345 send /millumin/index:1/rotation 40.6;
-#X obj 54 301 routeOSC /millumin;
+#X obj 54 338 routeOSC /millumin;
 #X obj 655 35 import mrpeach;
-#X connect 2 0 10 0;
-#X connect 3 0 17 0;
+#X obj 255 373 udpsend;
+#X obj 54 368 routeOSC /selectedLayer;
+#X text 34 59 Press CMD+E to edit the patch.;
+#X text 34 22 BASIC PURE DATA EXAMPLE;
+#X text 34 46 Be sure to click "connect" first.;
+#X connect 2 0 7 0;
+#X connect 3 0 14 0;
 #X connect 4 0 3 0;
-#X connect 5 0 6 0;
-#X connect 6 0 7 0;
-#X connect 7 0 2 0;
-#X connect 8 0 13 0;
-#X connect 9 0 8 0;
-#X connect 10 0 9 0;
-#X connect 11 0 9 0;
-#X connect 12 0 9 0;
-#X connect 14 0 8 0;
-#X connect 15 0 8 0;
-#X connect 16 0 9 0;
+#X connect 5 0 2 0;
+#X connect 6 0 16 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 9 0 6 0;
+#X connect 11 0 16 0;
+#X connect 12 0 16 0;
+#X connect 13 0 6 0;
+#X connect 14 0 17 0;
+#X connect 16 0 10 0;
 #X connect 17 0 5 0;
