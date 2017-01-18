@@ -1,0 +1,32 @@
+#######################################
+# Syntax Coloring Map For Arduration
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+MilluminStream_	KEYWORD1
+MilluminStream	KEYWORD1
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+encode	KEYWORD2
+decode	KEYWORD2
+getEncodedBufferSize	KEYWORD2
+send	KEYWORD2
+setPacketHandler	KEYWORD2
+update	KEYWORD2
+begin	KEYWORD2
+onPacket	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+END	LITERAL1
+ESC	LITERAL1
+ESC_END	LITERAL1
+ESC_ESC	LITERAL1
