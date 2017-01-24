@@ -1,8 +1,19 @@
+/*
+  MilluminStream.cpp
+  MilluminStream is an small, efficient, library that
+  allows Arduinos to send and receive serial data
+  packets with Millumin.
+  Created by Anomes, 2016.
+  Creative Commons Attribution-NonCommercial 4.0 International Public License
+*/
+
+
 #include "MilluminStream.h"
 
 PacketSerial serial;
 namespace MilluminStream
 {
+  #define BAUDRATE 9600
   #define BUFFER_SIZE 254
   static uint8_t buffer[BUFFER_SIZE];
   static int bufferIndex;
@@ -10,48 +21,13 @@ namespace MilluminStream
   static InputCallback inputCallback;
   static BufferCallback bufferCallback;
 
+
+
   void clearBuffer()
   {
     bufferIndex = 1;
     buffer[0] = 'F';
     memset(buffer+1, '\0', BUFFER_SIZE-1);
-  }
-
-  void setup()
-  {
-    clearBuffer();
-    serial.setPacketHandler(&onPacket);
-    serial.begin(BAUDRATE);
-    loopIdleTime = 8;
-  }
-    
-  void setLoopIdleTime(int idleTime)
-  {
-    loopIdleTime = idleTime;
-  }
-    
-  int getLoopIdleTime()
-  {
-    return loopIdleTime;
-  }
-
-  void setInputCallback(InputCallback callback)
-  {
-    inputCallback = callback;
-  }
-
-  void setBufferCallback(BufferCallback callback)
-  {
-    bufferCallback = callback;
-  }
-
-  void update()
-  {
-    if( loopIdleTime > 0 )
-    {
-      delay(loopIdleTime);
-    }
-    serial.update();
   }
 
   void onPacket(const uint8_t* buffer, size_t size)
@@ -71,7 +47,7 @@ namespace MilluminStream
         uint8_t index = tmp[i++];
         uint8_t hByte = tmp[i++];
         uint8_t lByte = tmp[i++];
-        uint16_t value = word(hByte, lByte);
+        uint16_t value = word(lByte, hByte);
         if(key=='D')
         {
           if( value > 0 )
@@ -104,13 +80,41 @@ namespace MilluminStream
     }
   }
 
-  void sendFrame()
+  void setup()
   {
-    if( bufferIndex > 1 )
+    clearBuffer();
+    serial.setPacketHandler(&onPacket);
+    serial.begin(BAUDRATE);
+    loopIdleTime = MILLUMIN_STREAM_DEFAULT_IDLE_TIME;
+  }
+
+  void setLoopIdleTime(int idleTime)
+  {
+    loopIdleTime = idleTime;
+  }
+
+  int getLoopIdleTime()
+  {
+    return loopIdleTime;
+  }
+
+  void setInputCallback(InputCallback callback)
+  {
+    inputCallback = callback;
+  }
+
+  void setBufferCallback(BufferCallback callback)
+  {
+    bufferCallback = callback;
+  }
+
+  void update()
+  {
+    if( loopIdleTime > 0 )
     {
-      serial.send(buffer, bufferIndex);
-      clearBuffer();
+      delay(loopIdleTime);
     }
+    serial.update();
   }
 
   void sendVariableForID(char id, uint16_t variable)
@@ -145,5 +149,14 @@ namespace MilluminStream
       buffer[bufferIndex++] = id;
       buffer[bufferIndex++] = byte;
     }
+  }
+
+  void sendFrame()
+  {
+      if( bufferIndex > 1 )
+      {
+          serial.send(buffer, bufferIndex);
+          clearBuffer();
+      }
   }
 }

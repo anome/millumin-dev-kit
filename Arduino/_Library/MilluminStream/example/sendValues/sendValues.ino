@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include <PacketSerial.h>
 #include <MilluminStream.h>
 
 void setup()

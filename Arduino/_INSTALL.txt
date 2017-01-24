@@ -2,16 +2,12 @@
 # HOW TO INSTALL #
 ##################
 
-- be sure to have the last version of Arduino and Processing
-- install "oscP5" for Processing from "oscP5-0.9.8.zip" file
-- follow this tutorial to create your Arduino circuit : http://arduino.cc/en/Tutorial/Graph
+- install arduino IDE from here : https://www.arduino.cc/en/Main/Software
+- follow those tutorial to learn how to work with arduino : https://www.arduino.cc/en/Tutorial/HomePage
 - install "ArduinoPush" on your Arduino card
-- launch "ProcessingOSC" with Processing
-- on your Arduino circuit, turn the potentiometer to change the opacity in Millumin
 
-
-
-If you want to use direct OSC connection between your Arduino circuit and Millumin, please install ArdOSC and watch this tutorial ---> http://vimeo.com/9145690
-
+- to make more complex code for arduino and Millumin, install the libraries from “_Library” folder.
+- examine the code from MilluminStreamSample to learn how to make your own personal code.
+- we invite you to use the platformio IDE instead of the arduino one : http://platformio.org/
 
 Keep in mind that the easiest way to use your Arduino with Millumin V2, is to click on the button "Auto-program"
