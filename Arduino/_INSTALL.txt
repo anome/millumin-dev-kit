@@ -4,10 +4,10 @@
 
 - install arduino IDE from here : https://www.arduino.cc/en/Main/Software
 - follow those tutorial to learn how to work with arduino : https://www.arduino.cc/en/Tutorial/HomePage
-- install "ArduinoPush" on your Arduino card
+- install "0_RawMode" on your Arduino card to test it.
 
 - to make more complex code for arduino and Millumin, install the libraries from “_Library” folder.
-- examine the code from MilluminStreamSample to learn how to make your own personal code.
+- examine the 4 MilluminStream sample code to learn how to make your own personal code.
 - we invite you to use the platformio IDE instead of the arduino one : http://platformio.org/
 
 Keep in mind that the easiest way to use your Arduino with Millumin V2, is to click on the button "Auto-program"

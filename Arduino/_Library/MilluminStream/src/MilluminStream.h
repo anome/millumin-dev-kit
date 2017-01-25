@@ -22,9 +22,9 @@ namespace MilluminStream
 #define MILLUMIN_STREAM_DEFAULT_IDLE_TIME 16
 
     //////////////////////////////////////////////////////////////////////////////
-    // Initialize MilluminStream
-    // set the baudrate to 9600
-    // must be call in setup()
+    // Initialize MilluminStream.
+    // Set the baudrate to 9600.
+    // Must be call in setup().
     void setup();
 
     //////////////////////////////////////////////////////////////////////////////
@@ -35,12 +35,21 @@ namespace MilluminStream
 
     //////////////////////////////////////////////////////////////////////////////
     // Set the callback that will handle keys that MilluminStream doesn't understand in the frame.
-    // Is typically use to handle servo.
+    // MilluminStream automatically handle A and D key value.
+    // A is for analogic input,
+    // D is for digital input.
+    // Other key are handle in this method.
+    // It is typically used to handle servo.
     typedef void (*InputCallback)(uint8_t key, uint8_t index, uint16_t value);
     void setInputCallback(InputCallback callback);
 
     //////////////////////////////////////////////////////////////////////////////
     // Set the callback for packet that arn't understood by MilluminStream.
+    // If the packet begins by :
+    // F : ask MilluminStream to send the current frame,
+    // f : MilluminStream decode the packet as a frame,
+    // I : MilluminStream send its name.
+    // Other value are handle in the bufferCallback.
     typedef void (*BufferCallback)(const uint8_t* buffer, size_t size);
     void setBufferCallback(BufferCallback callback);
 
