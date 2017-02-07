@@ -1,6 +1,6 @@
 /*
  MilluminStream.h
- MilluminStream is an small, efficient, library that
+ MilluminStream is a small, efficient, library that
  allows Arduinos to send and receive serial data
  packets with Millumin.
  Created by Anomes, 2016.
@@ -28,8 +28,8 @@ namespace MilluminStream
     void setup();
 
     //////////////////////////////////////////////////////////////////////////////
-    // Get and set idle time in millisecond between two loop.
-    // Default value is 16 millisecond.
+    // Get and set idle time in milliseconds between two loops.
+    // Default value is 16 milliseconds.
     void setLoopIdleTime(int loopIdleTime);
     int getLoopIdleTime();
 
@@ -64,11 +64,11 @@ namespace MilluminStream
     void sendVariableForID(char id, uint16_t variable);
 
     //////////////////////////////////////////////////////////////////////////////
-    // Update the finale frame with the value of the analog pin.
+    // Update the final frame with the value of the analog pin.
     void sendAnalogForID(char id);
 
     //////////////////////////////////////////////////////////////////////////////
-    // Update the finale frame with the value of the digital pin.
+    // Update the final frame with the value of the digital pin.
     void sendDigitalForID(char id);
 
     //////////////////////////////////////////////////////////////////////////////
