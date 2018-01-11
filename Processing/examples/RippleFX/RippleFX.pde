@@ -2,26 +2,26 @@
 // Original author: radio79
 // Adapted by : Philippe Chaurand
 // Original algorithm on http://www.neilwallis.com/java/water.html
- 
+
 import codeanticode.syphon.*;
- 
+
 PGraphics canvas;
 SyphonServer server;
 PImage img;
 Ripple ripple;
- 
+
 void setup() {
   img = loadImage("image.jpg");
   // DISPLAY SETUP
-  size(img.width, img.height, P3D);
+  size(600, 450, P3D);
   frameRate(60);
-  canvas = createGraphics(img.width, img.height, P3D);
+  canvas = createGraphics(600, 450, P3D);
   // SYPHON SETUP
   server = new SyphonServer(this, "Ripple");
   // RIPPLE
   ripple = new Ripple();
 }
- 
+
 void draw() {
   // RENDERING RIPPLE
   canvas.beginDraw();
@@ -65,7 +65,7 @@ class Ripple {
   int rwidth, rheight;
   int ttexture[];
   int ssize;
- 
+
   Ripple() {
     // constructor
     riprad = 3;
@@ -78,15 +78,15 @@ class Ripple {
     oldind = width;
     newind = width * (height + 3);
   }
- 
- 
- 
+
+
+
   void newframe() {
     // update the height map and the image
     i = oldind;
     oldind = newind;
     newind = i;
- 
+
     i = 0;
     mapind = oldind;
     for (int y = 0; y < height; y++) {
@@ -99,14 +99,14 @@ class Ripple {
           ripplemap[newind + i] = 0;
         else
           ripplemap[newind + i] = data;
- 
+
         // where data = 0 then still, where data > 0 then wave
         data = (short)(1024 - data);
- 
+
         // offsets
         a = ((x - rwidth) * data / 1024) + rwidth;
         b = ((y - rheight) * data / 1024) + rheight;
- 
+
         //bounds check
         if (a >= width)
           a = width - 1;
@@ -116,7 +116,7 @@ class Ripple {
           b = height-1;
         if (b < 0)
           b=0;
- 
+
         col[i] = img.pixels[a + (b * width)];
         mapind++;
         i++;
