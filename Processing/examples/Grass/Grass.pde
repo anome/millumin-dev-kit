@@ -8,20 +8,20 @@ SyphonServer server;
 OscP5 oscP5;
 NetAddress myBroadcastLocation;
 float factor;
-
+boolean shouldSendMouse; 
 
 void setup()
 {
   // DISPLAY SETUP
-  size(640, 480, P3D);
-  canvas = createGraphics(width, height, P3D);
+  size(400, 400, P3D);
+  canvas = createGraphics(400, 400, P3D);
   initTheScene();
   // SYPHON SETUP
   server = new SyphonServer(this, "Processing Cube");
+  factor = 0.5;
   // OSC SETUP
-  oscP5 = new OscP5(this, 5001);
-  myBroadcastLocation = new NetAddress("127.0.0.1", 5000);
-  factor = 1;
+  oscP5 = new OscP5(this, 8000);
+  myBroadcastLocation = new NetAddress("127.0.0.1", 1234);
 }
 
 
@@ -33,24 +33,31 @@ void draw()
   canvas.endDraw();
   image(canvas, 0, 0);
   server.sendImage(canvas);
+  if ( shouldSendMouse )
+  {
+    shouldSendMouse = false;
+    OscMessage myOscMessage = new OscMessage("/millumin/selectedLayer/opacity");
+    myOscMessage.add(100*mouseX/width);
+    oscP5.send(myOscMessage, myBroadcastLocation);
+  }
 }
 
 
 // SEND ORDER TO MILLUMIN
 void mouseMoved()
 {
-  OscMessage myOscMessage = new OscMessage("/millumin/selectedLayer/opacity");
-  myOscMessage.add(100*mouseX/width);
-  oscP5.send(myOscMessage, myBroadcastLocation);
+  shouldSendMouse = true;
 }
 
 
 // RECEIVE ORDER FROM MILLUMIN
 void oscEvent(OscMessage theOscMessage)
 {
-  if ( theOscMessage.addrPattern().equals("/millumin/selectedLayer/scale") )
+  if( theOscMessage.addrPattern().equals("/millumin/selectedLayer/scale") )
   {
-    factor = theOscMessage.get(0).floatValue()/100;
+    print(" addrpattern: "+theOscMessage.addrPattern());
+    println(" typetag: "+theOscMessage.typetag());
+    factor = theOscMessage.get(0).floatValue();
   }
 }
 
@@ -157,11 +164,11 @@ class segment
   //--------------------------------------
   void check() {
     PVector pos = new PVector( //this is the tip of segment
-    noise(heartbeat*0.005, 0)*halfW + base.x - quarterW, 
-    noise(0, (heartbeat + 1000)*0.005)*height);
+      noise(heartbeat*0.005, 0)*halfW + base.x - quarterW, 
+      noise(0, (heartbeat + 1000)*0.005)*height);
     PVector posDir = new PVector( //this the bezier control point for the tip
-    noise((heartbeat + 2000)*0.005, 0)*halfW + pos.x - quarterW, 
-    noise(0, (heartbeat + 3000)*0.005)*halfH + pos.y - quarterH);
+      noise((heartbeat + 2000)*0.005, 0)*halfW + pos.x - quarterW, 
+      noise(0, (heartbeat + 3000)*0.005)*halfH + pos.y - quarterH);
     PVector baseDir = new PVector(base.x, height - (height - pos.y)*0.5); //base control point
 
     //putting it all together...
@@ -170,15 +177,14 @@ class segment
     float g = 80*f + (1-f)*170;
     float b = 64*f + (1-f)*108;
     canvas.fill(num*r/cnt, num*g/cnt, num*b/cnt);
-      canvas.stroke(0, 0, 0, 0);
-      canvas.beginShape(POLYGON);
-      canvas.vertex(base.x-baseW, base.y);
-      canvas.bezierVertex(base.x-baseW, baseDir.y, posDir.x, posDir.y, pos.x, pos.y);
-      canvas.bezierVertex(posDir.x, posDir.y, base.x+baseW, baseDir.y, base.x+baseW, base.y);
+    canvas.stroke(0, 0, 0, 0);
+    canvas.beginShape(POLYGON);
+    canvas.vertex(base.x-baseW, base.y);
+    canvas.bezierVertex(base.x-baseW, baseDir.y, posDir.x, posDir.y, pos.x, pos.y);
+    canvas.bezierVertex(posDir.x, posDir.y, base.x+baseW, baseDir.y, base.x+baseW, base.y);
     canvas.endShape(CLOSE);
 
     heartbeat+=spd; //thump-thump
   }
   //--------------------------------------
 }
-
