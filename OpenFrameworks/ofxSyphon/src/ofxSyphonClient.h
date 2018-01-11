@@ -8,25 +8,45 @@
  */
 
 #include "ofMain.h"
+#include "ofxSyphon.h"
 
 class ofxSyphonClient {
 	public:
 	ofxSyphonClient();
 	~ofxSyphonClient();
-	
-    void setup ();
+    ofxSyphonClient(ofxSyphonClient const& s);
+    ofxSyphonClient & operator= (ofxSyphonClient const& s);
+
+    void setup();
+    bool isSetup();
     
-    string getApplicationName();
-    string getServerName();
+    void set(ofxSyphonServerDescription _server);
+    void set(string _serverName, string _appName);
     
-    void setApplicationName(string appName);
-    void setServerName(string serverName);
+    void setApplicationName(string _appName);
+    void setServerName(string _serverName);
+    
+    string& getApplicationName();
+    string& getServerName();
   
     void bind();
     void unbind();
     
+    /*
+     To use the texture with getTexture()
+     you should surround it with bind() and 
+     unbind() functions */
+    
+    ofTexture& getTexture() {return mTex;}
+    
     void draw(float x, float y, float w, float h);
     void draw(float x, float y);
+    void drawSubsection(float x, float y, float w, float h, float sx, float sy, float sw, float sh);
+    void drawSubsection(float x, float y, float sx, float sy, float sw, float sh);
+
+	
+	float getWidth();
+	float getHeight();
     
 	protected:
 	void* mClient;
@@ -34,5 +54,5 @@ class ofxSyphonClient {
 	ofTexture mTex;
 	int width, height;
 	bool bSetup;
-	string name;
+    string appName, serverName;
 };

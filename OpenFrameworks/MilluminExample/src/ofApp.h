@@ -2,7 +2,7 @@
 #include "ofxSyphon.h"
 #include "ofxOsc.h"
 
-class MilluminApp : public ofBaseApp {
+class ofApp : public ofBaseApp {
 	
 public:
 	

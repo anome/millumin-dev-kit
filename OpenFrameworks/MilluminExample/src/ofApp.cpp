@@ -1,10 +1,10 @@
-#include "MilluminApp.h"
+#include "ofApp.h"
 
 const int width = 800;
 const int height = 600;
 
 //--------------------------------------------------------------
-void MilluminApp::setup(){
+void ofApp::setup(){
 	counter = 0;
 	ofSetCircleResolution(50);
 	
@@ -33,7 +33,7 @@ void MilluminApp::setup(){
 }
 
 //--------------------------------------------------------------
-void MilluminApp::update(){
+void ofApp::update(){
 	counter = counter + 0.033f;
 	while(receiver.hasWaitingMessages()){
 		// get the next message
@@ -84,7 +84,7 @@ void MilluminApp::update(){
 }
 
 //--------------------------------------------------------------
-void MilluminApp::draw(){
+void ofApp::draw(){
 	
     // Clear with alpha, so we can capture via syphon and composite elsewhere should we want.
     glClearColor(0.0, 0.0, 0.0, 0.0);
@@ -181,7 +181,7 @@ void MilluminApp::draw(){
 }
 
 //--------------------------------------------------------------
-void MilluminApp::mouseMoved(int x, int y){
+void ofApp::mouseMoved(int x, int y){
 	ofxOscMessage m;
 	m.setAddress("/millumin/selectedLayer/opacity");
 	m.addFloatArg( x*100.f/width );
@@ -189,7 +189,7 @@ void MilluminApp::mouseMoved(int x, int y){
 }
 
 //--------------------------------------------------------------
-void MilluminApp::keyPressed  (int key){
+void ofApp::keyPressed  (int key){
 	if (key == 's'){
 		bSmooth = !bSmooth;
 	}
