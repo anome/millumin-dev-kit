@@ -2,6 +2,8 @@
 # HOW TO INSTALL #
 ##################
 
+- download the cinder syphon block from here : https://github.com/Hperigo/Cinder-Syphon
+- copy the file in the “blocks” folder
 - be sure to have the last version of Cinder
-- install "ciMillumin" in the "samples" directory
-- launch "ciMillumin/xcode/ciMillumin.xcodeproj" in Xcode
+- install "CinderMillumin" in the "samples" directory
+- launch "CinderMillumin/xcode/CinderMillumin.xcodeproj” in Xcode
