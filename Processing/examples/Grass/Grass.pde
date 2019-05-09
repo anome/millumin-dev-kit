@@ -37,7 +37,7 @@ void draw()
   {
     shouldSendMouse = false;
     OscMessage myOscMessage = new OscMessage("/millumin/selectedLayer/opacity");
-    myOscMessage.add(100*mouseX/width);
+    myOscMessage.add((float)mouseX/width);
     oscP5.send(myOscMessage, myBroadcastLocation);
   }
 }
@@ -56,8 +56,10 @@ void oscEvent(OscMessage theOscMessage)
   if( theOscMessage.addrPattern().equals("/millumin/selectedLayer/scale") )
   {
     print(" addrpattern: "+theOscMessage.addrPattern());
-    println(" typetag: "+theOscMessage.typetag());
+    print(" typetag: "+theOscMessage.typetag());
     factor = theOscMessage.get(0).floatValue();
+    print(" ");
+    println(factor);
   }
 }
 

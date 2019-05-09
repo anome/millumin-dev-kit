@@ -51,7 +51,7 @@ void draw()
 void mouseMoved()
 {
   OscMessage myOscMessage = new OscMessage("/millumin/selectedLayer/opacity");
-  myOscMessage.add(100*mouseX/width);
+  myOscMessage.add((float)mouseX/width);
   oscP5.send(myOscMessage, myBroadcastLocation);
 }
 
@@ -61,6 +61,6 @@ void oscEvent(OscMessage theOscMessage)
 {
   if ( theOscMessage.addrPattern().equals("/millumin/selectedLayer/scale") )
   {
-    factor = theOscMessage.get(0).floatValue()/100;
+    factor = theOscMessage.get(0).floatValue();
   }
 }
