@@ -9,12 +9,16 @@
 
 
 
+MilluminStream stream("MyArduino");
+
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // Initialisation
 void setup()
 {
   // We setup MilluminStream
-  MilluminStream::setup();
+  stream.setup();
 
   // TODO
   // Your setting up your code...
@@ -27,12 +31,12 @@ void setup()
 void loop()
 {
   // First, we need to update MilluminStream
-  MilluminStream::update();
+  stream.update();
 
   // TODO
   // browse some inteligence...
   // add data to the current frame...
 
   // Finally we send just one frame with all our values
-  MilluminStream::sendFrame();
+  stream.sendFrame();
 }

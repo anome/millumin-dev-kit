@@ -14,6 +14,12 @@
 #include <Servo.h>
 static Servo servo;
 
+
+
+MilluminStream stream("MyArduino");
+
+
+
 // This the the input callback function
 // MilluminStream automatically handle A and D key value
 // A is for analogic input
@@ -36,10 +42,10 @@ void onInputValue(uint8_t key, uint8_t index, uint16_t value)
 void setup()
 {
   // We setup MilluminStream
-  MilluminStream::setup();
+  stream.setup();
 
   // We set the callback if we need to use servo
-  MilluminStream::setInputCallback(onInputValue);
+  stream.setInputCallback(onInputValue);
 
   // We attach the first servo to pin D3
   servo.attach(3);
@@ -52,8 +58,8 @@ void setup()
 void loop()
 {
   // First, we need to update MilluminStream
-  MilluminStream::update();
+  stream.update();
 
   // Finally we send just one frame with all our values
-  MilluminStream::sendFrame();
+  stream.sendFrame();
 }

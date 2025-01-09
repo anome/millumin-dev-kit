@@ -9,12 +9,16 @@
 
 
 
+MilluminStream stream("MyArduino");
+
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // Initialisation
 void setup()
 {
   // We setup MilluminStream
-  MilluminStream::setup();
+  stream.setup();
 
   // pin A0 as input to stream its sensor value
   pinMode(A0, INPUT);
@@ -30,18 +34,18 @@ void setup()
 void loop()
 {
   // First, we need to update MilluminStream
-  MilluminStream::update();
+  stream.update();
 
   // Then, we stream pin A0
-  MilluminStream::sendAnalogForID(0); // Add the value of A0 pin to the frame
+  stream.sendAnalogForID(0); // Add the value of A0 pin to the frame
 
   // Then, we stream pin D3
-  MilluminStream::sendDigitalForID(3); // Add the value of D3 pin to the frame
+  stream.sendDigitalForID(3); // Add the value of D3 pin to the frame
 
   // Stream a custom value
   uint16_t variable = random(0, 255);
-  MilluminStream::sendVariableForID(0, variable); // Add a custom value to the frame
+  stream.sendVariableForID(0, variable); // Add a custom value to the frame
 
   // Finally we send just one frame with all our values
-  MilluminStream::sendFrame();
+  stream.sendFrame();
 }

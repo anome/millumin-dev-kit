@@ -1,0 +1,18 @@
+PROJECT_NAME           = PacketSerial
+PROJECT_BRIEF          = "An Arduino Library that facilitates packet-based serial communication using COBS or SLIP encoding."
+INPUT                  = ../src \
+                         .
+FILE_PATTERNS          = *.c \
+                         *.cpp \
+                         *.h \
+                         *.hpp \
+                         *.md \
+                         *.ino \
+                         *.pde
+EXCLUDE                = ./html
+EXCLUDE_PATTERNS       = *.bak
+USE_MDFILE_AS_MAINPAGE = README.md
+HTML_OUTPUT            = html
+GENERATE_TREEVIEW      = YES
+GENERATE_TAGFILE       = PacketSerial.xml
+GENERATE_LATEX         = NO
