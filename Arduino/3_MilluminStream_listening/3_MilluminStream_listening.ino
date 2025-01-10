@@ -33,7 +33,7 @@ void setup()
   // We setup MilluminStream
   stream.setup();
 
-  // We set the callback if we need to use servo
+  // We set the callback if we want to handle personal input
   stream.setInputCallback(onInputValue);
 
   // We initialise each pin we need to use
