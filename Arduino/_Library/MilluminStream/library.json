@@ -1,0 +1,27 @@
+{
+  "name": "MilluminStream",
+  "version": "0.2",
+  "description": "MilluminStream is an small, efficient, library that allows Arduinos to send and receive serial data packets with Millumin",
+  "keywords": "Millumin, communication",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/anome/millumin-dev-kit"
+  },
+  "authors":
+  [
+    {
+      "name": "Anomes",
+      "email": "contact@millumin.com",
+      "url": "https://www.millumin.com"
+    }
+  ],
+  "license": "CC-BY-NC-4.0",
+  "homepage": "https://www.millumin.com",
+  "dependencies": {
+    "bakercp/PacketSerial": "~1.4.0",
+    "arduino-libraries/Servo": "~1.2.2"
+  },
+  "frameworks": "*",
+  "platforms": "*"
+}
